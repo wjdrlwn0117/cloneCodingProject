@@ -34,7 +34,7 @@ public class LifeCycle2 : MonoBehaviour
             Debug.Log("슈퍼 미사일 발사!! ");
 
         //Edit/Input Manager에 있는 Jump버튼을 활용한 로직 눌렀을 때, 누르고 있을 때, 땠을 때로 나누어 받음
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("SuperJump"))
             Debug.Log("점프!");
 
         if (Input.GetButton("Jump"))
