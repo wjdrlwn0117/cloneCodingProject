@@ -22,7 +22,17 @@ public class LifeCycle : MonoBehaviour
     }
     void Update()                       //프레임 - 로직  (게임 로직 업데이트, 환경에 따라 실행 주기가 떨어질 수 있음)
     {
-
+        Vector3 vec = new Vector3(
+            Input.GetAxisRaw("Horizontal") * Time.deltaTime, //버튼을 통해 
+            Input.GetAxisRaw("Vertical") * Time.deltaTime,
+            0); ;                         //벡터 값
+        //Time.deltaTime 사용하는 방법 : 이전 프레임이 완료까지 걸린 시간
+        // 1. Translate : 벡터에 곱하기
+        // transform.Translate(Vec * Time.deltaTime);
+        // 2. Vector 함수 : 시간 매개변수에 곱하기
+        // Vector3.Lerp(Vec1, Vec2, T * Time.deltaTime);
+        transform.Translate(vec);       //Translate : 벡터 값을 현재 위치에 더하는 함수
+                                        //오브젝트는 변수 transform을 항상 가지고 있음.
     }
     void LateUpdate()                   //프레임 - 후처리 (모든 업데이트 끝난 후) 
     {
