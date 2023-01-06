@@ -27,6 +27,7 @@ public class LifeCycle : MonoBehaviour
             Input.GetAxisRaw("Vertical") * Time.deltaTime,
             0); ;                         //벡터 값
         //Time.deltaTime 사용하는 방법 : 이전 프레임이 완료까지 걸린 시간
+        //deltaTime값은 프레임이 적으면 크고, 프레임이 많으면 작음
         // 1. Translate : 벡터에 곱하기
         // transform.Translate(Vec * Time.deltaTime);
         // 2. Vector 함수 : 시간 매개변수에 곱하기
